@@ -47,15 +47,7 @@ const contentSource = makeSource({
       return options;
     },
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      [
-        rehypePrettyCode,
-        {
-          theme: 'github-dark',
-        },
-      ],
-      rehypeHighlight,
-    ],
+    rehypePlugins: [[rehypePrettyCode, rehypeHighlight]],
   },
 });
 
