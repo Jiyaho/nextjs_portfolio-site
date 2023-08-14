@@ -4,7 +4,7 @@ import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
-function DarkMode({}: Object) {
+function DarkMode() {
   const [mount, setMount] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
 

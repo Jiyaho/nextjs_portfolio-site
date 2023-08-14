@@ -12,17 +12,17 @@ function ProjectCard() {
   return (
     <>
       {projectsToDisplay.map((project) => (
-        <Link key={project._id} href={`/portfolio/${project._raw.sourceFileName.split('.mdx')[0]}`}>
-          <ul>
-            <li>
+        <Link key={project._id} href={`/portfolio/${project._raw.sourceFileName.replace('.mdx', '')}`}>
+          <ul className="m-7">
+            <li className="c_project-card">
               {project.thumbnail ? (
-                <Image className="m-auto" src={project.thumbnail} alt="thumbnail" width={300} height={200} />
+                <Image src={project.thumbnail} alt="thumbnail" className="h-64" width={450} height={280} />
               ) : (
-                'thumbnail image'
+                'thumbnail'
               )}
             </li>
-            <li className="text-2xl">{project._raw.sourceFileName.replace('.mdx', '')}</li>
-            <li>{project.description}</li>
+            <li className="mt-2 text-2xl">{project.title}</li>
+            <li className="mb-10">{project.description}</li>
           </ul>
         </Link>
       ))}

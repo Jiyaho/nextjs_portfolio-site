@@ -1,6 +1,10 @@
+'use client';
+
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { allPosts } from '@/contentlayer/generated';
 import { notFound } from 'next/navigation';
+import { useTheme } from 'next-themes';
+import ScrollButton from '@/components/atoms/ScrollButton';
 
 // export async function generateStaticParams() {
 //   return allPosts.map((post) => ({
@@ -18,12 +22,13 @@ function ProjectDetailPage({ params: { slug } }: { params: { slug: string } }) {
   // Parse the MDX file via the useMDXComponent hook.
   const MDXContent = useMDXComponent(post.body.code || '');
 
+  const { systemTheme, theme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+
   return (
-    <section className="p-12 text-center">
-      <h1 className="text-4xl mb-5">{post.title}</h1>
-      <h2 className="text-xl mb-2">{post.category}</h2>
-      <hr />
-      <article className="prose mt-2 m-auto">
+    <section className="p-12">
+      <ScrollButton />
+      <article className={currentTheme === 'dark' ? 'prose m-auto mt-2 c_dark-mode_post' : 'prose m-auto  mt-2'}>
         <MDXContent />
       </article>
     </section>

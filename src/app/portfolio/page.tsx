@@ -3,9 +3,8 @@ import ProjectCard from '@/components/atoms/ProjectCard';
 async function Portfolio() {
   return (
     <section className="p-12 text-center items-center">
-      <h1 className="text-4xl mb-2">Projects</h1>
       <hr />
-      <article className="mt-4">
+      <article className="mt-5 flex flex-row flex-wrap justify-center">
         <ProjectCard />
       </article>
     </section>

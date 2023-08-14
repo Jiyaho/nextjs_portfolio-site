@@ -1,8 +1,6 @@
 'use client';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { AiOutlineClose } from 'react-icons/ai';
-import { NavLinks } from '@/constants';
-import Link from 'next/link';
 import { useState } from 'react';
 import NavMenu from '../atoms/NavMenu';
 
@@ -14,13 +12,13 @@ function NavDropdown() {
 
   return (
     <div className="md:hidden p-5">
-      <button onClick={handleMenuToggle}>{menuToggle ? <RxHamburgerMenu /> : <AiOutlineClose />}</button>
+      <button onClick={handleMenuToggle}>{menuToggle ? <AiOutlineClose /> : <RxHamburgerMenu />}</button>
       {menuToggle ? (
-        ''
-      ) : (
-        <div className="flex flex-col bg-gray-100">
-          <NavMenu linkClass="p-2" />
+        <div className="flex flex-col absolute w-fit bg-[rgba(0,0,0,0.4)]">
+          <NavMenu className="p-2 hover:bg-sky-700" />
         </div>
+      ) : (
+        ''
       )}
     </div>
   );

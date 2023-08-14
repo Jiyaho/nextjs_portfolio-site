@@ -1,6 +1,9 @@
+'use client';
+
 import { allPosts } from '@/contentlayer/generated';
 import { useMDXComponent } from 'next-contentlayer/hooks';
 import { notFound } from 'next/navigation';
+import { useTheme } from 'next-themes';
 
 function Profile() {
   // 포스팅 전체 목록에서 폴더 경로 'profile'인것 찾기
@@ -12,12 +15,15 @@ function Profile() {
   // MDX 파일 body(글 내용 부분) 가져오기
   const MDXContent = useMDXComponent(profile?.body.code || '');
 
+  const { systemTheme, theme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
+
   return (
-    <div className="py-10 text-center">
-      <article className="prose m-auto">
+    <section className="py-10">
+      <article className={currentTheme === 'dark' ? 'prose m-auto text-center c_dark-mode_post' : 'prose m-auto text-center'}>
         <MDXContent />
       </article>
-    </div>
+    </section>
   );
 }
 export default Profile;

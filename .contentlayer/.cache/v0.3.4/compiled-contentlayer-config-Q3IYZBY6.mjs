@@ -46,15 +46,7 @@ var contentSource = makeSource({
       return options;
     },
     remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      [
-        rehypePrettyCode,
-        {
-          theme: "github-dark"
-        }
-      ],
-      rehypeHighlight
-    ]
+    rehypePlugins: [[rehypePrettyCode, rehypeHighlight]]
   }
 });
 var contentlayer_config_default = contentSource;
@@ -62,4 +54,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-XKH26ZIC.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-Q3IYZBY6.mjs.map
