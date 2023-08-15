@@ -16,7 +16,13 @@ function ProjectCard() {
           <ul className="m-7">
             <li className="c_project-card">
               {project.thumbnail ? (
-                <Image src={project.thumbnail} alt="thumbnail" className="h-64" width={450} height={280} />
+                <Image
+                  src={project.thumbnail}
+                  alt="thumbnail"
+                  width={390}
+                  height={200}
+                  className="w-auto h-auto relative z-100"
+                />
               ) : (
                 'thumbnail'
               )}
