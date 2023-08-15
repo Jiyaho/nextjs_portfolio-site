@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { BsArrowUpCircleFill } from 'react-icons/bs';
 
 function ScrollButton() {
   const [toggleScrollBtn, setToggleScrollBtn] = useState(false);
@@ -21,8 +22,8 @@ function ScrollButton() {
   return (
     <div>
       {toggleScrollBtn ? (
-        <button onClick={scrollToTop} className="fixed text-3xl right-1/4 bottom-1/3 text-center">
-          🔝
+        <button onClick={scrollToTop} className="c_scroll-button">
+          <BsArrowUpCircleFill />
         </button>
       ) : null}
     </div>

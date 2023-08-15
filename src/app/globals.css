@@ -35,3 +35,13 @@
   -ms-transform: scale(1.15);
   -o-transform: scale(1.15);
 }
+
+.c_scroll-button {
+  position: fixed;
+  font-size: 1.875rem;
+  bottom: 30%;
+  right: 3%;
+}
+
+.c_dark-mode_header {
+}

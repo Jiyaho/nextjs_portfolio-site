@@ -4,20 +4,26 @@ description: To-do-list website using local storage
 category: project
 createdAt: 2023-02-03
 updatedAt: 2023-08-15
-thumbnail: /react_to-do-list.png
+thumbnail: /thumbnail/react_to-do-list.png
 ---
 
 # To-do-list Application with React
 
-### Web Page URL: https://jiyaho.github.io/react-toDoApp/
+## 1. Description
 
-## 1. 소개
+- To-do-list web site using local storage in React.
 
-- 크롬 브라우저를 통해서 로그인한 사용자가 To Do List를 작성 및 삭제할 수 있다.
+## 2. URL
 
----
+- https://jiyaho.github.io/react-toDoApp/
 
-## 2. 기능
+## 3. Screenshot
+
+<img src="https://i.ibb.co/VS9G0MF/react-to-do-list01.png" alt="react-to-do-list01" border="0" />
+<img src="https://i.ibb.co/BtLpP0s/react-to-do-list02.png" alt="react-to-do-list02" border="0" />
+<img src="https://i.ibb.co/0mxXsmX/react-to-do-list03.png" alt="react-to-do-list03" border="0" />
+
+## 4. Feature Description
 
 - 사용자 로그인 (localStorage에 사용자 정보 저장)
 - 인용문구: 사용자 로그인 전 화면 하단 부에 인용문구 랜덤으로 표출
@@ -30,9 +36,35 @@ thumbnail: /react_to-do-list.png
 - 시간: 현재 시각 표출
 - 사용자 환영 문구: 로그인한 사용자 이름 및 인사 문구 화면 중앙부에 표출
 
----
+## 5. Used Skills
 
-## 3. 업데이트 예정 기능
+- React.js
+- CSS.Module
+- Local storage
 
-- 사용자가 작성한 To Do List 수정 기능
-- 완료한 To Do List Check 기능
+## 6. File Tree Structure
+
+```
+📦 react-toDoApp
+├─ .gitignore
+├─ README.md
+├─ package-lock.json
+├─ package.json
+├─ public
+└─ src
+   ├─ App.js
+   ├─ components
+   │  ├─ BgImg.js
+   │  ├─ Clock.js
+   │  ├─ Login.js
+   │  ├─ Quotes.js
+   │  ├─ Todo.js
+   │  └─ WeatherAPI.js
+   ├─ css
+   │  ├─ BgImg.module.css
+   │  ├─ Clock.module.css
+   │  ├─ Login.module.css
+   │  ├─ Todo.module.css
+   │  └─ WeatherAPI.module.css
+   └─ index.js
+```
