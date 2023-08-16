@@ -19,7 +19,7 @@ function ProjectCard() {
                 <Image
                   src={project.thumbnail}
                   alt="thumbnail"
-                  width={390}
+                  width={370}
                   height={200}
                   className="w-auto h-auto relative z-100"
                 />

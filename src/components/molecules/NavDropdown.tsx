@@ -11,16 +11,18 @@ function NavDropdown() {
   };
 
   return (
-    <div className="md:hidden p-5">
-      <button onClick={handleMenuToggle}>{menuToggle ? <AiOutlineClose /> : <RxHamburgerMenu />}</button>
+    <>
+      <button className="c_nav-bar" onClick={handleMenuToggle}>
+        {menuToggle ? <AiOutlineClose /> : <RxHamburgerMenu />}
+      </button>
       {menuToggle ? (
-        <div className="flex flex-col absolute w-fit bg-[rgba(0,0,0,0.4)]">
-          <NavMenu className="p-2 hover:bg-sky-700" />
+        <div className="flex flex-col absolute w-fit bg-[rgba(0,0,0)] text-white">
+          <NavMenu className="p-2 hover:bg-teal-500 dark:hover:bg-pink-800" />
         </div>
       ) : (
         ''
       )}
-    </div>
+    </>
   );
 }
 export default NavDropdown;

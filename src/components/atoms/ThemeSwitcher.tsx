@@ -4,7 +4,7 @@ import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
-function ThemeSwitcher() {
+function ThemeSwitcher({ className }: { className: string }) {
   const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
@@ -22,7 +22,7 @@ function ThemeSwitcher() {
   }
 
   return (
-    <div className="bg-darkModeBg cursor-pointer rounded-[50%] p-5">
+    <div className={className}>
       {currentTheme === 'dark' ? (
         <BsFillMoonFill onClick={handleClick('light')} />
       ) : (
