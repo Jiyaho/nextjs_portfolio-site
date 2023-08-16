@@ -4,23 +4,22 @@ import { BsFillSunFill, BsFillMoonFill } from 'react-icons/bs';
 import { useState, useEffect } from 'react';
 import { useTheme } from 'next-themes';
 
-function DarkMode() {
-  const [mount, setMount] = useState(false);
+function ThemeSwitcher() {
+  const [mounted, setMounted] = useState(false);
   const { systemTheme, theme, setTheme } = useTheme();
+  const currentTheme = theme === 'system' ? systemTheme : theme;
 
-  useEffect(() => {
-    setMount(true);
-  }, []);
-
-  if (!mount) {
-    return null;
-  }
-
-  const handleClick = (screenMode: string) => () => {
-    setTheme(screenMode);
+  const handleClick = (themeMode: string) => () => {
+    setTheme(themeMode);
   };
 
-  const currentTheme = theme === 'system' ? systemTheme : theme;
+  useEffect(() => {
+    setMounted(true);
+  }, [currentTheme]);
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <div className="bg-darkModeBg cursor-pointer rounded-[50%] p-5">
@@ -32,4 +31,4 @@ function DarkMode() {
     </div>
   );
 }
-export default DarkMode;
+export default ThemeSwitcher;

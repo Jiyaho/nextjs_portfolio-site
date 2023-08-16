@@ -20,13 +20,13 @@ function ScrollButton() {
   }, []);
 
   return (
-    <div>
+    <>
       {toggleScrollBtn ? (
         <button onClick={scrollToTop} className="c_scroll-button">
           <BsArrowUpCircleFill />
         </button>
       ) : null}
-    </div>
+    </>
   );
 }
 

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Header from '@/components/organisms/Header';
-import Providers from '@/providers/index';
+import { ThemeProvider } from '@/providers/ThemeProvider';
 // const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -15,12 +15,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html suppressHydrationWarning>
       <body className="flex flex-col min-h-screen">
-        <Providers>
+        <ThemeProvider attribute="class" defaultTheme="system">
           <Header />
-          {/* <main className="bg-white dark: bg-black">{children}</main> */}
           <main className="min-h-screen">{children}</main>
           <Footer />
-        </Providers>
+        </ThemeProvider>
       </body>
     </html>
   );

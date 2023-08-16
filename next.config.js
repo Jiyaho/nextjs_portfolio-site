@@ -5,9 +5,5 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: false,
 };
-// const options = {
-//   reactStrictMode: true,
-//   swcMinify: false,
-// };
 
 module.exports = withContentlayer(nextConfig);
