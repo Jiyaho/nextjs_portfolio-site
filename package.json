@@ -31,6 +31,7 @@
     "rehype-pretty-code": "^0.10.0",
     "remark-gfm": "^3.0.1",
     "shiki": "^0.14.3",
+    "typeit-react": "^2.6.4",
     "typescript": "5.1.6"
   },
   "devDependencies": {

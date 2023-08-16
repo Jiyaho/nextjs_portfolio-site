@@ -1,7 +1,11 @@
+import TypeItComponent from '@/components/atoms/TypeItComponent';
+
 export default function Home() {
   return (
-    <div className="py-32 text-center">
-      <div className="text-4xl font-extralight">Hello World!</div>
-    </div>
+    <section className="py-32 text-center">
+      <div className="text-5xl font-extralight">
+        <TypeItComponent />
+      </div>
+    </section>
   );
 }
