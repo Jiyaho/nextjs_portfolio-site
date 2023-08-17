@@ -2,11 +2,11 @@
 
 import TypeIt from 'typeit-react';
 
-function TypeItComponent() {
+function TypeItGreeting() {
   return (
     <TypeIt
       options={{
-        strings: ['Hello world!'],
+        strings: 'Hello world!',
         speed: 100,
         waitUntilVisible: true,
       }}
@@ -14,4 +14,4 @@ function TypeItComponent() {
   );
 }
 
-export default TypeItComponent;
+export default TypeItGreeting;
