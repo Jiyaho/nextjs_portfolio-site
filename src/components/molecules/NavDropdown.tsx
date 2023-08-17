@@ -16,8 +16,8 @@ function NavDropdown() {
         {menuToggle ? <AiOutlineClose /> : <RxHamburgerMenu />}
       </button>
       {menuToggle ? (
-        <div className="flex flex-col absolute w-fit bg-[rgba(0,0,0)] text-white">
-          <NavMenu className="p-2 hover:bg-teal-500 dark:hover:bg-pink-800" />
+        <div className="flex flex-col absolute w-fit bg-dark-bg-color text-dark-text-color">
+          <NavMenu className="p-2 hover:bg-light-point-color dark:hover:bg-dark-point-color" />
         </div>
       ) : (
         ''

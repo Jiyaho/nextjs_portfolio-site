@@ -6,11 +6,8 @@ export const NavLinks = [
 ];
 
 export const Slogans = [
-  'Crafting Digital Experiences with Code',
-  'Coding, Coffee, and Creativity',
-  'Coding Dreams into Reality',
-  'Innovating Through Clean and Efficient Code',
-  'Where Innovation Meets Code',
-  'Exploring Possibilities, Writing Code',
-  'Transforming Ideas into Digital Magic',
+  'Crafting Digital Experiences with Code.',
+  'Transforming Ideas into Digital Magic!',
+  'Coding, Coffee, and Creativity...',
+  'Exploring Possibilities, Writing Code Again!',
 ];

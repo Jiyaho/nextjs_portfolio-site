@@ -13,22 +13,24 @@ function ProjectCard() {
     <>
       {projectsToDisplay.map((project) => (
         <Link key={project._id} href={`/portfolio/${project._raw.sourceFileName.replace('.mdx', '')}`}>
-          <ul className="m-7">
+          <ul className="m-10">
             <li className="c_project-card">
               {project.thumbnail ? (
-                <Image
-                  src={project.thumbnail}
-                  alt="thumbnail"
-                  width={370}
-                  height={200}
-                  className="w-auto h-auto relative z-100"
-                />
+                <div className="w-96 h-48 relative overflow-hidden rounded-lg">
+                  <Image
+                    src={project.thumbnail}
+                    alt="thumbnail-image"
+                    width={380}
+                    height={270}
+                    className="w-auto h-auto z-100 rounded-lg"
+                  />
+                </div>
               ) : (
                 'thumbnail'
               )}
             </li>
             <li className="mt-2 text-2xl">{project.title}</li>
-            <li className="mb-10">{project.description}</li>
+            <li className="mb-5">{project.description}</li>
           </ul>
         </Link>
       ))}

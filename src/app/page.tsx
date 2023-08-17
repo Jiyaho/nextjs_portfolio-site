@@ -1,12 +1,15 @@
-import TypeItComponent from '@/components/atoms/TypeItComponent';
+import TypeItGreeting from '@/components/atoms/TypeItGreeting';
+import TypeItSlogans from '@/components/atoms/TypeItSlogans';
 
 export default function Home() {
   return (
     <section className="py-32 text-center">
-      <div className="text-5xl font-extralight">
-        <div className="z-1 absolute h-full w-full">
-          <TypeItComponent />
-        </div>
+      {/* <div className="text-5xl font-extralight ">
+        <TypeItGreeting />
+      </div> */}
+      <h1 className="text-5xl font-extralight">Hello world!</h1>
+      <div className="mt-10 text-2xl font-extralight">
+        <TypeItSlogans />
       </div>
     </section>
   );
