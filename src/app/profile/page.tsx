@@ -14,7 +14,7 @@ function Profile() {
 
   return (
     <section className="py-10 mt-10">
-      <article className="prose dark:prose-invert m-auto text-center">
+      <article className="prose  dark:prose-invert m-auto text-center">
         <MDXContent />
       </article>
     </section>
