@@ -2,28 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: light-bg-color;
-  --foreground: light-text-color
-  color: light-text-color
-}
-:root.dark {
-  --background: dark-bg-color;
-  --foreground: dark-text-color;
-  color: dark-text-color;
-}
-
-/* :root {
-  --background: white;
-  --foreground: rgb(25, 25, 25);
-  color: rgb(25, 25, 25);
-}
-:root.dark {
-  --background: black;
-  --foreground: white;
-  color: rgb(226, 225, 225);
-} */
-
 /* 커스텀 */
 
 .c_dark-mode_post > *,

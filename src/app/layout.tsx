@@ -4,15 +4,14 @@ import { Inter } from 'next/font/google';
 import Footer from '@/components/atoms/Footer';
 import Header from '@/components/organisms/Header';
 import { ThemeProvider } from '@/providers/ThemeProvider';
-import Image from 'next/image';
 import Background from '@/components/atoms/Background';
 
 // const inter = Inter({ subsets: ['latin'] })
 
-// export const metadata: Metadata = {
-//   title: 'Janet and planet',
-//   description: 'Janet | Portfolio Site',
-// };
+export const metadata: Metadata = {
+  title: 'Janet and planet',
+  description: 'Janet | Portfolio Site',
+};
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

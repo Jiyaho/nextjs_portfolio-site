@@ -1,15 +1,21 @@
+'use client';
+import SvgPathDraw from '@/components/atoms/SvgPathDraw';
 import TypeItGreeting from '@/components/atoms/TypeItGreeting';
-import TypeItSlogans from '@/components/atoms/TypeItSlogans';
 
 export default function Home() {
   return (
-    <section className="py-32 text-center">
-      {/* <div className="text-5xl font-extralight ">
+    <section className="py-12 text-center">
+      <div className="h-16 text-6xl font-extralight">
         <TypeItGreeting />
-      </div> */}
-      <h1 className="text-5xl font-extralight">Hello world!</h1>
-      <div className="mt-10 text-2xl font-extralight">
-        <TypeItSlogans />
+      </div>
+      <div className="mt-12 h-min text-2xl font-extralight">
+        <p>Crafting Digital Experiences with Code.</p>
+        <p>Transforming Ideas into Digital Magic!</p>
+        <p>Coding, Coffee, and Creativity...</p>
+        <p>Exploring Possibilities, Writing Code Again!</p>
+      </div>
+      <div className="flex justify-center flex-col items-center mt-12">
+        <SvgPathDraw />
       </div>
     </section>
   );
