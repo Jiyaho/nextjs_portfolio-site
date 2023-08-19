@@ -2,7 +2,7 @@
 
 ## 🔷 URL
 
-- Web Site:
+- Web Site: https://nextjs-portfolio-site-one.vercel.app/
 - Github Repository: https://github.com/Jiyaho/nextjs_portfolio-site
 
 ## 🔷 Description
