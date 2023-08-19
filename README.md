@@ -29,3 +29,55 @@ Next.js와 tailwind를 활용하여 제작한, MDX 파일 변환 방식을 이�
 <img src="https://i.ibb.co/LgWkvmT/06.png" alt="06" border="0">
 
 ## 🔷 File Tree Structure
+
+```
+📦 nextjs_portfolio-site
+├─ .contentlayer
+├─ .eslintrc.jso
+├─ .gitignore
+├─ README.md
+├─ contentlayer.config.ts
+├─ next.config.js
+├─ package-lock.json
+├─ package.json
+├─ postcss.config.js
+├─ posts
+├─ publ
+├─ src
+│  ├─ app
+│  │  ├─ favicon.ico
+│  │  ├─ globals.css
+│  │  ├─ layout.tsx
+│  │  ├─ page.tsx
+│  │  ├─ portfolio
+│  │  │  ├─ [slug]
+│  │  │  │  └─ page.tsx
+│  │  │  └─ page.tsx
+│  │  └─ profile
+│  │     └─ page.tsx
+│  ├─ components
+│  │  ├─ atoms
+│  │  │  ├─ Background.tsx
+│  │  │  ├─ Footer.tsx
+│  │  │  ├─ NavMenu.tsx
+│  │  │  ├─ ProjectCard.tsx
+│  │  │  ├─ ScrollButton.tsx
+│  │  │  ├─ SvgPathDraw.tsx
+│  │  │  ├─ ThemeSwitcher.tsx
+│  │  │  ├─ TypeItGreeting.tsx
+│  │  │  └─ TypeItSlogans.tsx
+│  │  ├─ molecules
+│  │  │  ├─ NavDropdown.tsx
+│  │  │  └─ Navigation.tsx
+│  │  └─ organisms
+│  │     └─ Header.tsx
+│  ├─ constants
+│  │  ├─ SvgPathInfo.ts
+│  │  └─ index.ts
+│  ├─ providers
+│  │  └─ ThemeProvider.tsx
+│  └─ utils
+│     └─ getMdxMetaData.tsx
+├─ tailwind.config.js
+└─ tsconfig.json
+```
