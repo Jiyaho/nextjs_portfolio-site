@@ -16,6 +16,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className="dark" suppressHydrationWarning>
+      <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className="flex flex-col">
         <ThemeProvider attribute="class" defaultTheme="system">
           <Header />
