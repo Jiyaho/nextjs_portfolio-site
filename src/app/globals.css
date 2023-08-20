@@ -4,11 +4,6 @@
 
 /* 커스텀 */
 
-.c_dark-mode_post > *,
-.c_dark-mode_post > ul > li > a {
-  color: rgb(217, 217, 217);
-}
-
 .c_project-card {
   transform: sacle(1);
   -webkit-transform: scale(1);

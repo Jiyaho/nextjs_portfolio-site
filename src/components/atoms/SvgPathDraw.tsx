@@ -38,7 +38,7 @@ const SvgPathDraw = () => {
 
   return (
     <>
-      <div className="h-2/5 w-2/5">
+      <div className="h-4/5 w-4/5">
         <svg viewBox={firstSvgViewBox} xmlns="http://www.w3.org/2000/svg">
           <path d={firstSvgDir} className="stroke-1 fill-none stroke-light-text-color dark:stroke-dark-text-color" />
         </svg>

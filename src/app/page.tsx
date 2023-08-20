@@ -8,7 +8,7 @@ export default function Home() {
       <div className="h-16 text-6xl font-extralight">
         <TypeItGreeting />
       </div>
-      <div className="mt-12 h-min text-2xl font-extralight">
+      <div className="mt-12 h-min text-lg font-extralight">
         <p>Crafting Digital Experiences with Code.</p>
         <p>Transforming Ideas into Digital Magic!</p>
         <p>Coding, Coffee, and Creativity...</p>

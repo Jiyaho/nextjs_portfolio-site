@@ -6,17 +6,14 @@ import NavMenu from '../atoms/NavMenu';
 
 function NavDropdown() {
   const [menuToggle, setMenuToggle] = useState(false);
-  const handleMenuToggle = () => {
-    setMenuToggle(!menuToggle);
-  };
 
   return (
     <>
-      <button className="c_nav-bar" onClick={handleMenuToggle}>
+      <button className="c_nav-bar" onClick={() => setMenuToggle(!menuToggle)}>
         {menuToggle ? <AiOutlineClose /> : <RxHamburgerMenu />}
       </button>
       {menuToggle ? (
-        <div className="flex flex-col absolute w-fit bg-dark-bg-color text-dark-text-color">
+        <div onClick={() => setMenuToggle(false)} className="flex flex-col absolute w-fit bg-dark-bg-color text-dark-text-color">
           <NavMenu className="p-2 hover:bg-light-point-color dark:hover:bg-dark-point-color" />
         </div>
       ) : (
