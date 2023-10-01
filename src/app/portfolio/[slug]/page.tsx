@@ -14,8 +14,8 @@ function ProjectDetailPage({ params: { slug } }: { params: { slug: string } }) {
 
   return (
     <>
-      <section className="p-12">
-        <article className="prose dark:prose-invert m-auto mt-2">
+      <section className="p-5 md:p-10">
+        <article className="prose dark:prose-invert m-auto">
           <MDXContent />
         </article>
       </section>

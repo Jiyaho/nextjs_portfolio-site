@@ -14,8 +14,8 @@ function Background() {
   }, [currentTheme]);
 
   return (
-    <div className="fixed -z-50 w-full h-full">
-      <Image src={isDarkMode ? '/bg/dark1.jpg' : '/bg/light1.jpg'} alt="bg_img" fill sizes="100vw, 50vw" className="-z-100" />
+    <div className="fixed -z-50 w-screen h-screen">
+      <Image src={isDarkMode ? '/bg/dark1.jpg' : '/bg/light1.jpg'} alt="bg_img" fill className="-z-100" />
     </div>
   );
 }
