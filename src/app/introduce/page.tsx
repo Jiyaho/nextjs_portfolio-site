@@ -5,7 +5,7 @@ function Introduce() {
   return (
     <article className="mt-16 flex-row text-center justify-center md:flex md:text-left md:mt-40">
       <div>
-        <h1 className="text-5xl font-bold">I'm Shin Jiho,</h1>
+        <h1 className="text-5xl font-bold">I’m Shin Jiho,</h1>
         <p className="text-2xl  mb-1 font-bold italic">you can also call me Janet.</p>
         <h2 className="text-3xl font-bold text-dark-point-color dark:text-light-point-color">Front-end Developer</h2>
         <div className="mt-2 mb-4 h-min text-md">
@@ -14,7 +14,7 @@ function Introduce() {
           <p>Coding, Coffee, and Creativity...</p>
           <p>Exploring Possibilities, Writing Code Again!</p>
         </div>
-        <div className="border rounded-md w-28 text-center text-xl bg-dark-bg-color text-dark-text-color m-auto mb-5 md:m-0 ">
+        <div className="border rounded-md w-28 text-center text-xl bg-dark-bg-color text-dark-text-color m-auto mb-5 md:m-0">
           <Link href="/about">About Me</Link>
         </div>
       </div>
