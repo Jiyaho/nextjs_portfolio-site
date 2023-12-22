@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 function ProjectCard() {
   const projectsToDisplay = allPosts.filter(({ _raw }) => _raw.sourceFileDir === 'projects');
+  const sortProjectList = projectsToDisplay.reverse(); // 최신 프로젝트가 위로 가도록 목록 순서 뒤집기
 
   if (!projectsToDisplay) {
     return <div>Project is not found</div>;
@@ -11,8 +12,11 @@ function ProjectCard() {
 
   return (
     <>
-      {projectsToDisplay.map((project) => (
-        <Link key={project._id} href={`/portfolio/${project._raw.sourceFileName.replace('.mdx', '')}`}>
+      {sortProjectList.map((project) => (
+        <Link
+          key={project._id}
+          href={`/portfolio/${project._raw.sourceFileName.replace('.mdx', '')}`}
+        >
           <ul className="m-10">
             <li className="c_project-card">
               {project.thumbnail ? (
