@@ -2,7 +2,7 @@
 module.exports = {
   content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
   plugins: [require('@tailwindcss/typography')],
-  darkMode: ['class'],
+  darkMode: 'class',
   theme: {
     colors: {
       'light-point-color': 'rgb(20 184 166)',

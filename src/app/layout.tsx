@@ -14,11 +14,18 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const setThemeMode = `
+    if(!window.localStorage.getItem('theme')){
+      localStorage.theme = 'light'
+    }
+    document.body.dataset.theme = window.localStorage.getItem('theme')
+  `;
+
   return (
-    <html className="dark" suppressHydrationWarning>
+    <html suppressHydrationWarning>
       <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className="flex flex-col">
-        <ThemeProvider attribute="class" defaultTheme="system">
+        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
           <Header />
           <Background />
           <main className="min-h-screen">{children}</main>

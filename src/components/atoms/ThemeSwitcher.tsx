@@ -9,13 +9,19 @@ function ThemeSwitcher({ className }: { className: string }) {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
+  // if (typeof window !== 'undefined') {
+  //   const newTheme = localStorage.theme === 'dark' ? 'light' : 'dark';
+  //   localStorage.theme = newTheme;
+  //   document.body.dataset.theme = newTheme;
+  // }
+
   const handleClick = (themeMode: string) => () => {
     setTheme(themeMode);
   };
 
   useEffect(() => {
     setMounted(true);
-  }, [currentTheme]);
+  }, []);
 
   if (!mounted) {
     return null;
@@ -23,7 +29,7 @@ function ThemeSwitcher({ className }: { className: string }) {
 
   return (
     <div className={className}>
-      {currentTheme === 'dark' ? (
+      {theme === 'dark' ? (
         <BsFillMoonFill onClick={handleClick('light')} />
       ) : (
         <BsFillSunFill onClick={handleClick('dark')} />
