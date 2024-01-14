@@ -9,12 +9,6 @@ function ThemeSwitcher({ className }: { className: string }) {
   const { systemTheme, theme, setTheme } = useTheme();
   const currentTheme = theme === 'system' ? systemTheme : theme;
 
-  // if (typeof window !== 'undefined') {
-  //   const newTheme = localStorage.theme === 'dark' ? 'light' : 'dark';
-  //   localStorage.theme = newTheme;
-  //   document.body.dataset.theme = newTheme;
-  // }
-
   const handleClick = (themeMode: string) => () => {
     setTheme(themeMode);
   };
@@ -29,7 +23,7 @@ function ThemeSwitcher({ className }: { className: string }) {
 
   return (
     <div className={className}>
-      {theme === 'dark' ? (
+      {currentTheme === 'dark' ? (
         <BsFillMoonFill onClick={handleClick('light')} />
       ) : (
         <BsFillSunFill onClick={handleClick('dark')} />

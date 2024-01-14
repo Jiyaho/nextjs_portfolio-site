@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html suppressHydrationWarning>
       <link rel="icon" href="/favicon.svg" sizes="any" />
       <body className="flex flex-col">
-        <ThemeProvider attribute="class" enableSystem defaultTheme="system">
+        <ThemeProvider attribute="class" enableSystem={true} defaultTheme="system">
           <Header />
           <Background />
           <main className="min-h-screen">{children}</main>
