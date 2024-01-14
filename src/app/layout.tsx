@@ -1,6 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+// import { Inter } from 'next/font/google';
 import Footer from '@/components/atoms/Footer';
 import Header from '@/components/organisms/Header';
 import { ThemeProvider } from '@/providers/ThemeProvider';
@@ -14,13 +14,6 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  const setThemeMode = `
-    if(!window.localStorage.getItem('theme')){
-      localStorage.theme = 'light'
-    }
-    document.body.dataset.theme = window.localStorage.getItem('theme')
-  `;
-
   return (
     <html suppressHydrationWarning>
       <link rel="icon" href="/favicon.svg" sizes="any" />
